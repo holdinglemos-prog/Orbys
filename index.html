@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html>
-  
-  <style>
-  #canvas {
-    position: relative;
-    width: 100%;
-    height: 80vh;
-  }
-  .card {
-    position: absolute;
-    background: #111;
-    color: white;
-    padding: 12px 16px;
-    border-radius: 10px;
-    border: 1px solid #333;
-    user-select: none;
-    touch-action: none;
-  }
-</style>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Funil de Ideias</title>
 
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    #canvas {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+    }
+
+    #lines {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .card {
+      position: absolute;
+      background: #111;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid #333;
+      user-select: none;
+      touch-action: none;
+      z-index: 1;
+    }
+  </style>
 </head>
+
 <body style="background:black;color:white;font-family:sans-serif;padding:20px">
+
+  <h1>Funil de Ideias</h1>
+
+  <div id="canvas">
+    <svg id="lines"></svg>
+  </div>
+
   <div id="app"></div>
 
   <script src="app.js"></script>
