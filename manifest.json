@@ -1,0 +1,8 @@
+{
+  "name": "Funil de Ideias",
+  "short_name": "Ideias",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#0033ff"
+}
